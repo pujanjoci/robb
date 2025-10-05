@@ -1,37 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Loader from './components/Loader';
+import React, { useState } from 'react';
+import Loader from './components/layout/Loader';
+import ReadingProgress from './components/layout/ReadingProgress';
+import Header from './components/layout/Header';
+import Hero from './components/sections/Hero';
+import MetricsStrip from './components/sections/MetricsStrip';
+import Competencies from './components/sections/Competencies';
+import Experience from './components/sections/Experience';
+import Education from './components/sections/Education';
+import Contact from './components/sections/Contact';
+import Footer from './components/layout/Footer';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return <Loader />;
-  }
+  const [loadingFinished, setLoadingFinished] = useState(false);
 
   return (
-    <div className="App">
+    <div className="min-h-screen bg-[#F6F4EF] text-[#353B40] font-sans selection:bg-[#B39A73] selection:text-white relative">
+      {!loadingFinished && (
+        <Loader onFinished={() => setLoadingFinished(true)} />
+      )}
+      <ReadingProgress />
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
-        <About />
+        <MetricsStrip />
+        <Competencies />
         <Experience />
+        <Education />
         <Contact />
       </main>
-      
       <Footer />
     </div>
   );
