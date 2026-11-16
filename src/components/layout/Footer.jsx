@@ -17,9 +17,11 @@ const Footer = () => {
           
           {/* Brand & Identity */}
           <div className="md:col-span-5 flex items-center gap-3">
-            <span className="flex items-center justify-center w-9 h-9 rounded-xs bg-[#192D40] text-[#F6F4EF] font-serif text-base font-normal">
-              {personal.monogram}
-            </span>
+            <img
+              src={personal.logo}
+              alt={`${personal.name} Logo`}
+              className="w-9 h-9 object-contain rounded-xs border border-[#E5E0D8] bg-white p-1 shadow-xs"
+            />
             <div>
               <p className="font-serif text-base text-[#192D40] font-medium leading-tight">
                 {personal.name}

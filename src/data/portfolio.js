@@ -1,10 +1,12 @@
 import RobbImage from '../assets/robb.jpg';
 import ResumePDF from '../assets/Resume_Robb.pdf';
+import LogoImage from '../assets/icon.png';
 
 export const portfolioData = {
   personal: {
     name: "Ravi Shrestha",
     monogram: "RS",
+    logo: LogoImage,
     role: "Audit Associate",
     specialization: "Financial Auditing · Accounting · Regulatory Compliance",
     location: "Kathmandu & Bhaktapur, Nepal",

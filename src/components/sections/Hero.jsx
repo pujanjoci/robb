@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../../data/portfolio';
-import StatusPill from '../ui/StatusPill';
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -57,11 +56,6 @@ const Hero = () => {
           {/* Left Column: Editorial Typography */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             
-            {/* Status Pill */}
-            <div className="mb-5">
-              <StatusPill text={personal.availabilityText} />
-            </div>
-
             {/* Eyebrow */}
             <p className="text-xs uppercase tracking-widest text-[#B39A73] font-mono font-semibold mb-2">
               Audit & Accounting Professional

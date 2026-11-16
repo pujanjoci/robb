@@ -48,10 +48,12 @@ const Loader = ({ onFinished }) => {
     >
       <div className="flex flex-col items-center max-w-xs w-full px-6 text-center">
         
-        {/* Monogram */}
-        <div className="w-14 h-14 bg-[#192D40] text-[#F6F4EF] font-serif text-2xl flex items-center justify-center rounded-xs shadow-xs mb-5 border border-[#B39A73]/40">
-          {portfolioData.personal.monogram}
-        </div>
+        {/* Brand Logo Image */}
+        <img
+          src={portfolioData.personal.logo}
+          alt={`${portfolioData.personal.name} Logo`}
+          className="w-16 h-16 object-contain rounded-xs shadow-xs mb-5 border border-[#E5E0D8] bg-white p-1.5"
+        />
 
         {/* Identity */}
         <h1 className="font-serif text-2xl text-[#192D40] tracking-wide font-normal mb-1">
